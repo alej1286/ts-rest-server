@@ -2,6 +2,8 @@ npm i -g typescript
 npm init -y
 tsc --init
 tsc
-
 npm i typescript --save-dev
-./node_modules/.bin/tslint --init
+
+npm install tslint typescript -g
+tslint --init
+
