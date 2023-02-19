@@ -2,8 +2,12 @@ npm i -g typescript
 npm init -y
 tsc --init
 tsc
-npm i typescript --save-dev
 
 npm install tslint typescript -g
 tslint --init
+
+npm i express cors dotenv
+npm i --save-dev @types/express
+
+npm install -D nodemon ts-node
 
