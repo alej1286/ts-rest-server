@@ -13,17 +13,18 @@ class Server {
         };
         this.app = (0, express_1.default)();
         this.port = process.env.PORT || "8000";
+        //MIDDLEWARES CALLS
         this.middlewares();
-        //Routes defenitions
+        //ROUTES DEFINITION
         this.routes();
     }
     middlewares() {
-        //cors
+        //CORS
         this.app.use((0, cors_1.default)());
-        //body reading
+        //BODY READING
         this.app.use(express_1.default.json());
-        //public folder
-        this.app.use(express_1.default.static('public'));
+        //PUBLIC FOLDER
+        this.app.use(express_1.default.static("public"));
     }
     routes() {
         this.app.use(this.apiPaths.users, user_route_1.default);

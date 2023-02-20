@@ -13,21 +13,22 @@ class Server {
     this.app = express();
     this.port = process.env.PORT || "8000";
 
+    //MIDDLEWARES CALLS
     this.middlewares();
 
-    //Routes defenitions
+    //ROUTES DEFINITION
     this.routes();
   }
 
   middlewares() {
-    //cors
+    //CORS
     this.app.use(cors());
 
-    //body reading
+    //BODY READING
     this.app.use(express.json());
 
-    //public folder
-    this.app.use(express.static('public'))
+    //PUBLIC FOLDER
+    this.app.use(express.static("public"));
   }
 
   routes() {

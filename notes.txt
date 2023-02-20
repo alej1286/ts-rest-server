@@ -19,3 +19,21 @@ tsc --watch
 npm i --save-dev @types/cors
 
 
+//create DB
+docker run --name mymysql -e MYSQL_ROOT_PASSWORD=123456789 -e MYSQL_DATABASE=tasksdb -p 3306:3306 -d mysql
+// connect to db container
+docker exec -it mymysql bash
+//connect to mysql db
+mysql -u root --password
+
+CREATE DB users;
+
+USE users;
+
+CREATE TABLE `users` (
+  `id` int(11) AUTO_INCREMENT,
+  `name` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `state` tinyint DEFAULT 1 NOT NULL,
+  PRIMARY KEY (`id`)
+);
