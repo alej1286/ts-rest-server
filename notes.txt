@@ -8,6 +8,11 @@ tslint --init
 
 npm i express cors dotenv
 npm i --save-dev @types/express
+npm i -g nodemon
+npm i -g ts-node
 
-npm install -D nodemon ts-node
+//execute next process in separated terminals to view changes inmediately after file changes
+nodemon .\dist\app.js
+tsc --watch
+
 
