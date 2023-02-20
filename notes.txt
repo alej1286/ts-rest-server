@@ -16,3 +16,6 @@ nodemon .\dist\app.js
 tsc --watch
 
 
+npm i --save-dev @types/cors
+
+
